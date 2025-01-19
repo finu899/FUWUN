@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Đăng ký thành công!');
 
             // Chuyển đến trang đăng nhập
-            window.location.href = 'listview.html'; // Chuyển về trang đăng nhập
+            window.location.href = 'index.html'; // Chuyển về trang đăng nhập
         });
     }
 
