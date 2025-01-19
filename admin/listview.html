@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Danh Sách Người Dùng</title>
+</head>
+<body>
+    <button id="theme-switch" aria-label="Chuyển đổi chế độ sáng/tối">
+        <svg id="light-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" fill="none">
+            <path d="M12 4V2M12 22v-2M4.22 4.22l-1.42-1.42M20.78 20.78l-1.42-1.42M2 12H4M20 12h2M4.22 19.78l-1.42 1.42M20.78 3.22l-1.42 1.42M12 6a6 6 0 100 12 6 6 0 000-12z" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <svg id="dark-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" fill="none" style="display: none;">
+            <path d="M12 4a8 8 0 100 16 8 8 0 000-16z" fill="currentColor"/>
+        </svg>
+    </button>
+    <h1>Danh Sách Người Dùng</h1>
+    <div class="table-container">
+        <table id="userList">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên đăng nhập</th>
+                    <th>Mật khẩu</th>
+                    <th>Số điện thoại</th>
+                    <th>Email</th>
+                    <th>Vai trò</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dữ liệu người dùng sẽ được thêm vào đây -->
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript" src="script.js" defer></script>
+</body>
+</html>

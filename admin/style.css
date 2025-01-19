@@ -1,0 +1,201 @@
+/* Định nghĩa màu sắc cho chế độ tối */
+.darkmode {
+  --base-color: #000000; /* Màu nền chính */
+  --base-variant: #1a1a1a; /* Màu nền biến thể */
+  --text-color: #ffffff; /* Màu chữ chính */
+  --secondary-text: #cccccc; /* Màu chữ phụ */
+  --primary-color: #ffffff; /* Màu chính cho các phần tử */
+  --accent-color: #F37979; /* Màu nhấn mạnh */
+}
+
+/* Định nghĩa màu sắc cho chế độ sáng */
+body {
+  --base-color: #FFFFFF; /* Màu nền chính */
+  --base-variant: #FFFCFC; /* Màu nền biến thể */
+  --text-color: #000000; /* Màu chữ chính */
+  --secondary-text: #333333; /* Màu chữ phụ */
+  --primary-color: #000000; /* Màu chính cho các phần tử */
+  --accent-color: #F37979; /* Màu nhấn mạnh */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--base-variant);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px; /* Thêm padding cho body */
+}
+
+h1 {
+    margin: 20px 0;
+      text-align: center;
+  margin-bottom: 20px;
+  color: lightbluergba(0, 0, 0, 0.98);
+  text-shadow: 
+  0 0 10px rgba(0, 9, 255, 0.5),
+  0 0 20px rgba(0, 255, 255, 0.5),
+  0 0 30px rgba(42, 72, 183, 0.71),
+  0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+/* Định dạng cho ô nhập */
+.input-box {
+    margin-bottom: 15px; /* Khoảng cách giữa các ô nhập */
+    width: 100%; /* Chiều rộng 100% */
+    max-width: 400px; /* Giới hạn chiều rộng tối đa */
+}
+
+.input-box label {
+    display: block; /* Đảm bảo label chiếm toàn bộ chiều rộng */
+    margin-bottom: 5px; /* Khoảng cách giữa label và input */
+    color: var(--text-color); /* Màu chữ cho label */
+}
+
+.input-box input {
+    width: 100%; /* Chiều rộng 100% */
+    padding: 10px; /* Padding cho ô nhập */
+    border: 1px solid #ccc; /* Viền cho ô nhập */
+    border-radius: 4px; /* Bo tròn góc */
+    transition: border-color 0.3s; /* Hiệu ứng chuyển màu viền */
+}
+
+/* Hiệu ứng khi ô nhập được focus */
+.input-box input:focus {
+    border-color: var(--accent-color); /* Màu viền khi focus */
+    outline: none; /* Bỏ outline mặc định */
+}
+
+/* Định dạng cho ô nhập mật khẩu */
+.password-container {
+    position: relative; /* Để đặt nút con mắt bên cạnh ô nhập */
+    width: 100%; /* Chiều rộng 100% */
+    max-width: 100%; /* Giới hạn chiều rộng tối đa */
+}
+
+.password-container input {
+    padding-right: 40px; /* Tạo khoảng trống cho nút con mắt */
+}
+
+/* Định dạng cho nút con mắt */
+.toggle-password {
+    max-width: 40px;
+    position: absolute;
+    right: -1px; /* Khoảng cách từ bên phải */
+    top: 49%;
+    transform: translateY(-50%); /* Căn giữa theo chiều dọc */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px; /* Kích thước cho nút con mắt */
+    color: var(--text-color); /* Màu sắc cho nút */
+}
+
+/* Định dạng cho nút hành động */
+button {
+    padding: 10px 15px; /* Padding cho nút */
+    border: none; /* Bỏ viền */
+    border-radius: 4px; /* Bo tròn góc */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+    background-color: #007bff; /* Màu xanh cho nút */
+    color: white; /* Màu chữ cho nút */
+    width: 100%; /* Chiều rộng 100% */
+    max-width: 400px; /* Giới hạn chiều rộng tối đa */
+}
+
+/* Hiệu ứng hover cho nút */
+button:hover {
+    background-color: #0056b3 ; /* Màu nền khi hover */
+}
+
+/* Màu nền cho nút chỉnh sửa */
+button.edit {
+    background-color: #5cb85c; /* Màu xanh lá cho nút chỉnh sửa */
+}
+
+/* Màu nền cho nút xóa */
+button.delete {
+    background-color: #d9534f; /* Màu đỏ cho nút xóa */
+}
+
+/* Màu nền cho nút chuyển thành người dùng */
+button.toggle-role {
+    background-color: #007bff; /* Màu xanh cho nút chuyển vai trò */
+}
+
+/* Định dạng cho bảng */
+.table-container {
+    max-height: 400px; /* Chiều cao tối đa cho bảng */
+    overflow-y: auto; /* Cho phép cuộn dọc */
+    width: 80%; /* Đặt chiều rộng cho bảng */
+    max-width: 800px; /* Giới hạn chiều rộng tối đa */
+    margin: 20px 0; /* Khoảng cách trên và dưới bảng */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Xóa khoảng cách giữa các ô */
+}
+
+th, td {
+    padding: 10px; /* Padding cho ô */
+    text-align: left; /* Căn trái cho văn bản */
+    border-bottom: 1px solid var(--secondary-text); /* Đường viền dưới cho ô */
+}
+
+th {
+    background-color: var(--base-color); /* Màu nền cho tiêu đề */
+    color: var(--text-color); /* Màu chữ cho tiêu đề */
+}
+
+tr:hover {
+    background-color: var(--accent-color); /* Màu nền khi hover */
+}
+
+/* Định dạng cho nút chuyển đổi chế độ */
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Định dạng cho các biểu tượng SVG trong nút chuyển đổi */
+#theme-switch svg {
+    fill: var(--primary-color);
+    width: 24px;
+    height: 24px;
+}
+
+/* Ẩn biểu tượng chế độ sáng khi ở chế độ tối */
+.darkmode #theme-switch svg.light {
+    display: none;
+}
+
+/* Hiển thị biểu tượng chế độ tối khi ở chế độ tối */
+.darkmode #theme-switch svg.dark {
+    display: block;
+}
+
+/* Ẩn biểu tượng chế độ tối khi ở chế độ sáng */
+body #theme-switch svg.dark {
+    display: none;
+}
+
+/* Hiển thị biểu tượng chế độ sáng khi ở chế độ sáng */
+body #theme-switch svg.ligh{
+      display: block;  
+}
